@@ -26,11 +26,12 @@ public class BookController {
 
     // 도서 등록
     @PostMapping
-    public ApiResponse<Long> createBook(@Valid @RequestBody BookCreateForm bookCreateForm,
-                                        @RequestHeader("Authorization") String authHeader) {
+    public ApiResponse<Long> createBook(@Valid @RequestBody BookCreateForm bookCreateForm){
+        //    , @RequestHeader("Authorization") String authHeader) {
         log.info("BookCreateForm : {}", bookCreateForm.toString());
 
-        Long bookId = bookService.createBook(bookCreateForm, authHeader);
+        Long bookId = bookService.createBook(bookCreateForm);
+                //, authHeader);
 
         return ApiResponse.of(bookId);
     }
@@ -69,22 +70,24 @@ public class BookController {
     // 도서 수정
     @PutMapping("/{bookId}")
     public ApiResponse<Long> updateBook(@PathVariable(name = "bookId") Long bookId,
-                                        @RequestBody BookUpdateForm bookUpdateForm,
-                                        @RequestHeader("Authorization") String authHeader) {
+                                        @RequestBody BookUpdateForm bookUpdateForm){
+            //, @RequestHeader("Authorization") String authHeader) {
         log.info("updateBook()");
 
-        Long id = bookService.updateBook(bookId, bookUpdateForm, authHeader);
+        Long id = bookService.updateBook(bookId, bookUpdateForm);
+                //, authHeader);
 
         return ApiResponse.of(id);
     }
 
     // 도서 삭제
     @DeleteMapping("/{bookId}")
-    public ApiResponse<Long> deleteBook(@PathVariable(name = "bookId") Long bookId,
-                                        @RequestHeader("Authorization") String authHeader) {
+    public ApiResponse<Long> deleteBook(@PathVariable(name = "bookId") Long bookId){
+            //, @RequestHeader("Authorization") String authHeader) {
         log.info("deleteBook()");
 
-        Long id = bookService.deleteBook(bookId, authHeader);
+        Long id = bookService.deleteBook(bookId);
+                //, authHeader);
 
         return ApiResponse.of(id);
     }
