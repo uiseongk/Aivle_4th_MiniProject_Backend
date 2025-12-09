@@ -24,7 +24,6 @@
 
 ### **Frontend**
 - React
-- Axios
 - JavaScript
 - React Router
 - Material-UI(MUI)
