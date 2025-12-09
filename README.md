@@ -9,7 +9,7 @@
 
 
 ## 🎯 프로젝트 목표 (Project Goal)
-- - Spring Boot + React 기반의 **풀스택 도서 관리 시스템 개발**
+- Spring Boot + React 기반의 **풀스택 도서 관리 시스템 개발**
 - CRUD 기능(등록/조회/수정/삭제) 구현
 - OpenAI API(DALL·E)를 연동하여 **도서 표지 이미지를 자동 생성하는 기능** 포함
 
