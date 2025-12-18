@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+
+  pre_build:
+    commands:
+      - echo "Grant execute permission to gradlew"
+      - chmod +x gradlew
+
+  build:
+    commands:
+      - echo "Start Spring Boot CI build"
+      - ./gradlew clean build
