@@ -9,7 +9,8 @@ hooks:
   AfterInstall:
     - location: deploy-scripts/start.sh
       timeout: 120
-  ApplicationStop:
-    - location: deploy-scripts/stop.sh
-      timeout: 60
+      runas: ec2-user
+#  ApplicationStop:
+#    - location: deploy-scripts/stop.sh
+#      timeout: 60
 
