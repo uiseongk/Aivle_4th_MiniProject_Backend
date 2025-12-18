@@ -14,3 +14,8 @@ phases:
     commands:
       - echo "Start Spring Boot CI build"
       - ./gradlew clean build -x test
+
+artifacts:
+  files:
+    - appspec.yml
+    - 'deploy-scripts/**/*'
