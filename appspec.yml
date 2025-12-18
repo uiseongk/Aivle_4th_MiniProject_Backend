@@ -9,7 +9,6 @@ hooks:
   AfterInstall:
     - location: deploy-scripts/start.sh
       timeout: 120
-      runas: ubuntu
   ApplicationStop:
     - location: deploy-scripts/stop.sh
       timeout: 60
