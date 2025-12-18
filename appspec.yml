@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/deploy
+
+hooks:
+  AfterInstall:
+    - location: deploy-scripts/application-start-hook.sh
+      timeout: 120
+      runas: ubuntu
