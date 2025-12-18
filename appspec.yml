@@ -7,7 +7,7 @@ files:
 
 hooks:
   AfterInstall:
-    - location: deploy-scripts/application-start-hook.sh
+    - location: deploy-scripts/start.sh
       timeout: 120
       runas: ubuntu
   ApplicationStop:
