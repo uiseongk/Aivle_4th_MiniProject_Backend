@@ -7,16 +7,16 @@ phases:
 
   pre_build:
     commands:
-      - echo "Grant execute permission to gradlew"
       - chmod +x gradlew
 
   build:
     commands:
-      - echo "Start Spring Boot CI build"
-      - ./gradlew clean build -x test
+      - echo "Build Spring Boot executable jar"
+      - ./gradlew clean bootJar -x test
+      - ls -al build/libs   # ← 이 줄이 핵심 (확인용)
 
 artifacts:
   files:
     - appspec.yml
-    - 'deploy-scripts/**/*'
-    - '**/*'
+    - deploy-scripts/start.sh
+    - build/libs/*.jar
