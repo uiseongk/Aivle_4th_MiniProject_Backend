@@ -7,7 +7,9 @@ spring:
     resources:
       add-mappings: true
       static-locations:
-        - file:///C:/image-uploads/
+#        - file:///C:/image-uploads/
+#        - classpath:/static/
+        - file:/opt/app/uploads/
         - classpath:/static/
   application:
     name: aivle_4th_MiniProject_team19
