@@ -44,3 +44,6 @@ logging:
     org.hibernate.SQL: debug
     org.springframework: DEBUG
     org.springframework.web: DEBUG
+
+app:
+  upload-dir: /opt/app/uploads
